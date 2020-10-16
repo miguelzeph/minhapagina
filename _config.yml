@@ -3,3 +3,11 @@ theme: jekyll-theme-cayman
 name: Miguel
 description: Web Developer
 avatar: https://github.com/miguelzeph/minhapagina/blob/gh-pages/img/eu_githubpages.jpeg
+
+property: my_state_property
+  name: Example multiple choice setting
+  type: string
+  choices:
+    - [ Option 1, option_1 ] # The first item is the display value of dropdown, second argument is the value that will be stored
+    - [ Option 2, option_2 ]
+    - [ Option 3, option_3 ]
