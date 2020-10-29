@@ -1,37 +1,112 @@
-## Welcome to GitHub Pages
+**6/10/20 - UPDATES COMING SOON!**
 
-You can use the [editor on GitHub](https://github.com/miguelzeph/minhapagina/edit/gh-pages/README.md) to maintain and preview the content for your website in Markdown files.
+# simpleStore
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+[simpleStore](http://chrisdiana.github.io/simplestore) is a clean, responsive
+storefront boilerplate with no database you can setup in minutes. simpleStore is built on
+[simpleCart.js](http://simplecartjs.org) and [Skeleton](http://getskeleton.com)
+CSS Framework for a lightweight, fast, simple to use, and completely
+customizable experience.
 
-### Markdown
+![simpleStore Screenshot](https://raw.githubusercontent.com/chrisdiana/simplestore/gh-pages/images/screenshot-v1.1-full.png)
+![simpleStore Cart Screenshot](https://raw.githubusercontent.com/chrisdiana/simplestore/gh-pages/images/screenshot-v1.1-cart.png)
+![simpleStore Detail Screenshot](https://raw.githubusercontent.com/chrisdiana/simplestore/gh-pages/images/screenshot-v1.1-detail.png)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+---
 
-```markdown
-Syntax highlighted code block
+# Features
 
-# Header 1
-## Header 2
-### Header 3
+* No Databases, all client-side (just simple HTML, CSS & Javascript)
+* Lightweight & Fast
+* Tax Rate Calculations
+* Unlimited product attributes
+* Shipping
+* Multiple Currencies
+* Payment Gateways (Paypal, Google Checkout, Amazon Payments)
+* For more features check out [simpleCart.js](http://simplecartjs.org)
 
-- Bulleted
-- List
+# Plugins
 
-1. Numbered
-2. List
+* Google Sheets (Control products from a Google Sheet instead of JSON file)
 
-**Bold** and _Italic_ and `Code` text
+# Demo
 
-[Link](url) and ![Image](src)
+You can see a working demo [here](http://chrisdiana.github.io/simplestore/demo/)
+
+
+# Installation
+
+Install with Bower
+
+```
+bower install
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+or manually install using the latest [release](https://github.com/chrisdiana/simplestore/releases/latest)
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/miguelzeph/minhapagina/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+# Setup
 
-### Support or Contact
+1.Make sure simpleStore is on a web server (any type will do as long as it can serve static web pages).
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+2.Configure your payment options in `js/config.js`.
+
+```
+checkout: {
+	type: "PayPal" ,
+	email: "you@yours.com"
+},
+```
+
+3.Edit the `js/config.js` to your liking.
+
+4.Add additional products in the `products.json` file.
+
+# Using Plugins
+
+To use a plugin, add a reference just before your `config.js` file
+
+```
+<script src="plugins/google-sheets.js"></script>
+<script src="js/config.js"></script>
+```
+
+## HTML Version
+
+If you are looking for something more basic, check out the [HTML version on this
+branch](https://github.com/chrisdiana/simplestore/tree/simplestore-html).
+The HTML version uses plain HTML to build the store instead of a JSON
+file.
+
+Add additional products using the `<div class="simpleCart_shelfItem"></div>` tags.
+
+## Credit where credit is due
+
+For further documentation on expanding/tweaking simpleStore, check out the
+framework/plugin pages.
+
+* [Skeleton](http://getskeleton.com)
+* [simpleCart.js](http://simplecartjs.org)
+* [Normalize.css](http://necolas.github.io/normalize.css)
+* [FontAwesome](http://fortawesome.github.io/Font-Awesome)
+* [jQuery](https://jquery.com/)
+
+### A note about JavaScript shopping carts
+
+ALL JavaScript shopping carts are NOT fullproof. Because simpleStore is fully
+client-side, some users may attempt to alter prices before checkout.
+SimpleStore does the best it can to minimize this
+kind of activity. Make sure to monitor your sales. Just like in real life, if someone
+walks into your store and changes the price tag, you will certainly not honor
+those changes.
+
+
+# Contributing
+
+All forms of contribution are welcome: bug reports, bug fixes, pull requests and simple suggestions.
+If you do wish to contribute, please follow the [Airbnb Javascript Style Guide](https://github.com/airbnb/javascript) Thanks!
+
+
+## List of contributors
+
+You can find the list of contributors [here](https://github.com/chrisdiana/simplestore/graphs/contributors).
